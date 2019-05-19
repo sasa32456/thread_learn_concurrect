@@ -1,0 +1,82 @@
+
+
+CAS好处：
+1.可见性
+2.有序性
+3.原子性
+
+1.volatitle修饰的变量，能保证前两者
+2.CAS算法，也就是CPU级别的同步指令，相当于乐观锁，他也可以监测到其他线程对共享数据的变化情况
+
+atomicInteger++
+incrementAmdGet()
+
+
+//当前值
+value
+
+for(;;){
+    int current = get();
+    int next = current + 1;
+    //current期望值
+    if(compareAndSet(current , next))
+        return next;
+}
+
+T1           T2
+c:1          c:1
+             n:2
+             v:2
+
+n:2
+-----failed
+
+T1
+c:2
+n:3
+
+v:3
+c:3
+最快失败策略
+
+CAS轻量级锁，带来一个问题，ABA问题
+
+T1            T2
+A->C          A->B->A
+
+C
+
+
+对比却没判断原数据集合是否变化
+
+
+
+
+AtomicReferenceFieldUpdater对类属性进行原子操作
+
+1.属性必须volatile
+2.非private，protected（当前类可以是private,protected）
+3.类型必须一致
+4.其他
+
+不想使用锁（包括显式锁或重量级锁synchronized）
+
+
+
+
+不要直接使用原子类型声明变量，会浪费大量内存,例子:ConcurrentSkipListMap
+Node{
+    pre:Node
+    next:Node
+    value:Object
+}
+
+AtomicStampReference<Node>
+
+List 10000
+
+16*10000
+
+最后需要32*10000
+
+AtomicIntegerFieldUpdater 可以减少很多内存消耗
