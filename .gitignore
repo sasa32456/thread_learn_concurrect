@@ -22,3 +22,6 @@
 # virtual machine crash logs, see http://www.java.com/en/download/help/error_hotspot.xml
 hs_err_pid*
 .idea/
+target/production/thread_learn_concurrect/META-INF/
+"target/production/thread_learn_concurrect/com/n33/jcu/atmoic/\347\254\224\350\256\260.txt"
+target/test/thread_learn_concurrect/META-INF/

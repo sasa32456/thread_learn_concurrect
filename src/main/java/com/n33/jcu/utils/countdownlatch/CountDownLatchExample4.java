@@ -1,4 +1,4 @@
-package com.n33.jcu.utils;
+package com.n33.jcu.utils.countdownlatch;
 
 import java.util.ArrayList;
 import java.util.List;
