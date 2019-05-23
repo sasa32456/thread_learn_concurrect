@@ -1,0 +1,9 @@
+ * CyclicBarrier协同完成
+ * CountDownLatch监管完成
+
+
+ 1.CountDownLatch不能reset，而CyclicBarrier是可以循环使用
+ 2.CountDownLatch之间互不关心，CyclicBarrier必须到同一共同点才会执行
+
+
+ CyclicBarrier锁同一内容，Unsafe park
