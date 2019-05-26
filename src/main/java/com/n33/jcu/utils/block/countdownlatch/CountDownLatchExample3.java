@@ -1,4 +1,4 @@
-package com.n33.jcu.utils.countdownlatch;
+package com.n33.jcu.utils.block.countdownlatch;
 
 import java.util.concurrent.CountDownLatch;
 import java.util.concurrent.TimeUnit;

@@ -1,4 +1,4 @@
-package com.n33.jcu.utils.cyclicbarrier;
+package com.n33.jcu.utils.block.cyclicbarrier;
 
 import java.util.concurrent.BrokenBarrierException;
 import java.util.concurrent.CyclicBarrier;
@@ -46,11 +46,11 @@ public class CyclicBarrierExample2 {
         System.out.println(cyclicBarrier.isBroken());
 
         //打断 reset==initial==finished
-        cyclicBarrier.reset();
-
-        System.out.println(cyclicBarrier.getNumberWaiting());
-        System.out.println(cyclicBarrier.getParties());
-        System.out.println(cyclicBarrier.isBroken());
+//        cyclicBarrier.reset();
+//
+//        System.out.println(cyclicBarrier.getNumberWaiting());
+//        System.out.println(cyclicBarrier.getParties());
+//        System.out.println(cyclicBarrier.isBroken());
 
     }
 

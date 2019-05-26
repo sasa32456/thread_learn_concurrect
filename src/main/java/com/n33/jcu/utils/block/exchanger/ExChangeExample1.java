@@ -1,4 +1,4 @@
-package com.n33.jcu.utils.exchanger;
+package com.n33.jcu.utils.block.exchanger;
 
 import java.util.concurrent.Exchanger;
 import java.util.concurrent.TimeUnit;

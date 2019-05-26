@@ -1,4 +1,4 @@
-package com.n33.jcu.utils.cyclicbarrier;
+package com.n33.jcu.utils.block.cyclicbarrier;
 
 import java.util.concurrent.CountDownLatch;
 import java.util.concurrent.TimeUnit;

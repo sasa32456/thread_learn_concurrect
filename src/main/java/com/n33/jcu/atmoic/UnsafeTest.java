@@ -120,8 +120,8 @@ public class UnsafeTest {
         private long counter = 0;
         /**
          *
-         * Creates an instance of {@code ReentrantLock}.
-         * This is equivalent to using {@code ReentrantLock(false)}.
+         * Creates an instance of {@code reentrantlock}.
+         * This is equivalent to using {@code reentrantlock(false)}.
          * 默认不公平
          */
         private final Lock lock = new ReentrantLock();
