@@ -52,7 +52,7 @@ public class PhaserExample2 {
 
                 phaser.arriveAndAwaitAdvance();
 
-//                System.out.println("getPhase()=>" + phaser.getPhase());
+                System.out.println("getPhase()=>" + phaser.getPhase());
 
                 System.out.println(no + ": start bicycle.");
                 TimeUnit.SECONDS.sleep(random.nextInt(5));
@@ -60,7 +60,7 @@ public class PhaserExample2 {
 
                 phaser.arriveAndAwaitAdvance();
 
-//                System.out.println("getPhase()=>" + phaser.getPhase());
+                System.out.println("getPhase()=>" + phaser.getPhase());
 
                 System.out.println(no + ": start long jump.");
                 TimeUnit.SECONDS.sleep(random.nextInt(5));
