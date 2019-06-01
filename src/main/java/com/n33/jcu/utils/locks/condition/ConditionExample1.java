@@ -44,7 +44,6 @@ public class ConditionExample1 {
 
 
     private static void useData() {
-        System.out.println("========================================");
         try {
             lock.lock();
             while (!noUse) {
@@ -59,6 +58,7 @@ public class ConditionExample1 {
         } finally {
             lock.unlock();
         }
+        System.out.println("========================================");
     }
 
     public static void main(String[] args) {

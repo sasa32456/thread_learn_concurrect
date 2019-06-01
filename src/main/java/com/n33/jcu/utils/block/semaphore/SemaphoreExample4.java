@@ -4,7 +4,7 @@ import java.util.Collection;
 import java.util.concurrent.Semaphore;
 import java.util.concurrent.TimeUnit;
 
-public class SemaphoneExample4 {
+public class SemaphoreExample4 {
 
     public static void main(String[] args) throws InterruptedException {
 

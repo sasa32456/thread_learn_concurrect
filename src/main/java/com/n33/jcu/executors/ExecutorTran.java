@@ -1,6 +1,6 @@
-package com.n33.jcu.executors.threadpool;
+package com.n33.jcu.executors;
 
-public class ExecutorExample {
+public class ExecutorTran {
 }
 /**
  * 执行提交的{@link Runnable}任务的对象。

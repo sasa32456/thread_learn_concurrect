@@ -1,6 +1,6 @@
-package com.n33.jcu.executors.threadpool;
+package com.n33.jcu.executors;
 
-public class ExecutorServiceExample {
+public class ExecutorServiceTran {
 }
 /**
  * 一个{@link Executor}，提供管理终止的方法和可以生成{@link Future}以跟踪一个或多个异步任务进度的方法。

@@ -9,7 +9,7 @@ import java.util.concurrent.TimeUnit;
  * @author N33
  * @date 2019/5/25
  */
-public class SemaphoneExample3 {
+public class SemaphoreExample3 {
 
 
     public static void main(String[] args) throws InterruptedException {
