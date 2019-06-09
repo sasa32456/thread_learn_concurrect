@@ -1,12 +1,14 @@
-package com.n33.jcu.collections.list;
+package com.n33.jcu.collections.customer;
+
 
 /**
- * 有排序的list
+ * 学并发包先学主要数据结构
  *
  * @author N33
- * @date 2019/6/6
+ * @date 2019/6/5
  */
-public class PriorityLinkedList<E extends Comparable> {
+public class LinkedList<E> {
+
     private Node<E> first;
 
     private final Node<E> NULL = (Node<E>) null;
@@ -15,7 +17,7 @@ public class PriorityLinkedList<E extends Comparable> {
 
     private int size;
 
-    public PriorityLinkedList() {
+    public LinkedList() {
         this.first = null;
     }
 
@@ -28,8 +30,8 @@ public class PriorityLinkedList<E extends Comparable> {
     }
 
 
-    private static <E extends Comparable> PriorityLinkedList<E> of(E... elements) {
-        final PriorityLinkedList<E> list = new PriorityLinkedList<>();
+    private static <E> LinkedList<E> of(E... elements) {
+        final LinkedList<E> list = new LinkedList<>();
         if (elements.length != 0) {
             for (E ele : elements) {
                 list.addFirst(ele);
@@ -39,21 +41,11 @@ public class PriorityLinkedList<E extends Comparable> {
     }
 
 
-    private PriorityLinkedList<E> addFirst(E e) {
+    private LinkedList<E> addFirst(E e) {
         final Node<E> newNode = new Node<>(e);
-        Node<E> previous = NULL;
-        Node<E> current = first;
-        while (current != null && e.compareTo(current.value) > 0) {
-            previous = current;
-            current = current.next;
-        }
-        if (previous == NULL) {
-            first = newNode;
-        } else {
-            previous.next = newNode;
-        }
-        newNode.next = current;
-        size++;
+        newNode.next = first;
+        this.size++;
+        this.first = newNode;
         return this;
     }
 
@@ -71,9 +63,9 @@ public class PriorityLinkedList<E extends Comparable> {
 
     public E removeFirst() {
         /**
-         * also return the NULL always when the linked list is empty
+         * also return the NULL always when the linked customer is empty
          */
-        if (this.isEmpty()) throw new NoElementException("The linked list is empty");
+        if (this.isEmpty()) throw new NoElementException("The linked customer is empty");
 
         Node<E> node = first;
         first = node.next;
@@ -121,7 +113,24 @@ public class PriorityLinkedList<E extends Comparable> {
 
 
     public static void main(String[] args) {
-        final PriorityLinkedList<Integer> list = PriorityLinkedList.of(10, 1, -10, 0, 100, 88, 90, 2);
+
+        final LinkedList<String> list = LinkedList.of("Hello", "World", "Scala", "Java", "Thread");
+
+        list.addFirst("Concurrency").addFirst("Test");
+
+        System.out.println(list.size());
+        System.out.println(list.contains("Scala"));
+        System.out.println(list.contains("1"));
+        System.out.println("======================");
         System.out.println(list);
+
+        while (!list.isEmpty()) {
+            System.out.println(list.removeFirst());
+        }
+
+        System.out.println(list.size());
+        System.out.println(list.isEmpty());
     }
+
+
 }

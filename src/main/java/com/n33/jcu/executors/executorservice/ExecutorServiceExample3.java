@@ -133,7 +133,7 @@ public class ExecutorServiceExample3 {
 
     private static void testPrestartCoreThread() throws InterruptedException {
         ThreadPoolExecutor executorService = (ThreadPoolExecutor) Executors.newFixedThreadPool(2);
-//        ThreadPoolExecutor executorService = new ThreadPoolExecutor(2, 4, 30, TimeUnit.SECONDS, new ArrayBlockingQueue<>(1));
+//        ThreadPoolExecutor executorService = new ThreadPoolExecutor(2, 4, 30, TimeUnit.SECONDS, new arrayblockingqueue<>(1));
 
         System.out.println(executorService.getActiveCount());
 

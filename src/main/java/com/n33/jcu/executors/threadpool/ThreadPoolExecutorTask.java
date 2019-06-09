@@ -75,7 +75,7 @@ public class ThreadPoolExecutorTask {
              *  10 running
              *  10 stored in the blocking queue.
              *
-             *  1.return list<Runnable> remain 10 un handle runnable.
+             *  1.return customer<Runnable> remain 10 un handle runnable.
              *  2.still work for the runnable by core thread.
              *
              */

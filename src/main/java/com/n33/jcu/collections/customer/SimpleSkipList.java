@@ -1,4 +1,4 @@
-package com.n33.jcu.collections.list;
+package com.n33.jcu.collections.customer;
 
 import java.util.Random;
 
