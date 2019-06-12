@@ -37,7 +37,7 @@ public class SynchronousQueueExampleTest {
     /**
      * 如果另一个线程正在等待接收它，则将指定的元素插入此队列。
      * <pre>
-     * @param e the element to add
+     * @param. e the element to add
      * @return {@code true} if the element was added to this queue, else
      *         {@code false}
      * @throws NullPointerException if the specified element is null
@@ -63,7 +63,9 @@ public class SynchronousQueueExampleTest {
                 e.printStackTrace();
             }
         });
+        long startTime = System.currentTimeMillis();
         TimeUnit.MILLISECONDS.sleep(5);
+        System.out.println(System.currentTimeMillis() - startTime);
 
         assertThat(queue.offer("SynchronousQueue"), equalTo(true));
     }
