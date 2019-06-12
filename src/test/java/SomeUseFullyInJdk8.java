@@ -24,6 +24,7 @@ public class SomeUseFullyInJdk8 {
         }
     }
 
+
     /**
      * 多个方法接口（功能混杂）
      */
